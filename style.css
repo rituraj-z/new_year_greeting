@@ -192,14 +192,17 @@ center {
 }
 
 #header {
+    z-index: 20;
     display: flex;
 }
 
 #new {
+    z-index: 20;
     display: none;
 }
 
 .header {
+    z-index: 20;
     right: 10px;
     display: flex;
     flex-direction: row;
@@ -212,6 +215,7 @@ center {
 }
 
 .usr {
+    z-index: 20;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -222,10 +226,12 @@ center {
 }
 
 .user a {
+    z-index: 20;
     text-decoration: none;
 }
 
 .pic {
+    z-index: 20;
     background: white;
     height: 38px;
     width: 38px;
@@ -238,14 +244,17 @@ center {
 }
 
 button {
+    z-index: 20;
     border: none;
 }
 
 a {
+    z-index: 20;
     text-decoration: none
 }
 
 .go {
+    z-index: 20;
     border: 1.5px solid white;
     font-size: 14px;
     color: white;
@@ -262,6 +271,7 @@ a {
 }
 
 .link {
+    z-index: 20;
     margin-left: 5px;
     filter: invert(1);
     height: 14px;
@@ -269,6 +279,7 @@ a {
 }
 
 .wish {
+    z-index: 20;
     flex: 10;
     position: absolute;
     font-size: 16px;

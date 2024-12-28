@@ -21,7 +21,7 @@ function updateQuote() {
 }
 
 function updateCountdown() {
-    const newYear = new Date('December 28, 2024 15:30:00').getTime();
+    const newYear = new Date('December 28, 2024 16:00:00').getTime();
     const now = new Date().getTime();
     const timeLeft = newYear - now;
 
