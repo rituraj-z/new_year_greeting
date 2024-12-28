@@ -1,0 +1,612 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'MuseoModerno', cursive;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(1.jpg);
+    color: white;
+    text-align: center;
+    transition: 1s linear;
+}
+
+main {
+    flex-grow: 1;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#timermn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h1 {
+    transform: translateY(-30px);
+    display: flex;
+}
+
+.moving-bar {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    margin-top: 100px;
+    margin: auto;
+    border-radius: 5px;
+    width: 350px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.moving-bar #countdown {
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 15px 20px 15px 20px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.737);
+}
+
+.moving-bar::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 300%;
+    background: linear-gradient(rgb(255, 0, 0), purple, rgb(206, 96, 0),
+            blue);
+    filter: blur(30px);
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+center {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.time-block {
+    background: rgba(78, 125, 254, 0.189);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#celebration {
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+#celebration h2 {
+    font-size: 2.5rem;
+    color: gold;
+    animation: zoomio 2s infinite, zoom 5s infinite;
+}
+
+@keyframes zoomio {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes zoom {
+    0% {
+        text-shadow: 5px 8px 20px red;
+    }
+
+    25% {
+        text-shadow: 5px 8px 20px purple;
+    }
+
+    50% {
+        text-shadow: 5px 8px 20px blue;
+    }
+
+    75% {
+        text-shadow: 5px 8px 20px yellow;
+    }
+
+    100% {
+        text-shadow: 5px 8px 20px red;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#nyquotes {
+    transition: all 0.5s ease-in-out;
+    text-shadow: 5px 10px 10px black;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#header {
+    display: flex;
+}
+
+#new {
+    display: none;
+}
+
+.header {
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    margin-top: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+.usr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    color: white;
+}
+
+.user a {
+    text-decoration: none;
+}
+
+.pic {
+    background: white;
+    height: 38px;
+    width: 38px;
+    border-radius: 100%;
+    background: url('Me.jpg');
+    background-position: center;
+    background-size: cover;
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+
+button {
+    border: none;
+}
+
+a {
+    text-decoration: none
+}
+
+.go {
+    border: 1.5px solid white;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.322);
+    padding: 5px 10px 5px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 10px;
+}
+
+.link {
+    margin-left: 5px;
+    filter: invert(1);
+    height: 14px;
+    width: 14px;
+}
+
+.wish {
+    flex: 10;
+    position: absolute;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 13px;
+    transform: translate(0vw, 30vh);
+}
+
+button {
+    cursor: pointer;
+    width: 30vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    height: 35px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.347);
+    border: 2px solid black;
+    outline: none;
+    color: black;
+    font-weight: bolder;
+    font-family: cursive;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+@keyframes popup {
+    0% {
+        transform: translate(60vw, -60vh);
+        height: 40px;
+        width: 40px;
+        background-color: white;
+    }
+
+    30% {
+        transform: translate(60vw, -60vh);
+        height: 40px;
+        width: 40px;
+        background-color: white;
+    }
+
+    60% {
+        transform: translate(-35vw, -25vh);
+        height: 40px;
+        width: 40px;
+        background-color: white;
+    }
+
+    100% {
+        transform: translate(0vw, 30vh);
+        border-radius: 20px;
+        width: 10vw;
+        height: 50px;
+    }
+
+}
+
+.yearanimate {
+    position: relative;
+    display: none;
+    font-size: 50px;
+    margin-top: -250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 180px;
+    width: 100%;
+    letter-spacing: 10px;
+    padding-right: 60px;
+}
+
+#prefix {
+    position: absolute;
+}
+
+#four {
+    display: none;
+    animation: 3s four linear infinite;
+    position: absolute;
+    font-size: 100px;
+    color: yellow;
+    transform: translate(145px, -30px);
+}
+
+#five {
+    display: none;
+    animation: 3s five linear infinite;
+    position: absolute;
+    font-size: 100px;
+    color: crimson;
+    transform: translate(145px, -30px);
+}
+
+@keyframes four {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes five {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow: 0px 5px 25px rgba(172, 255, 47, 0.501);
+    }
+
+    75% {
+        opacity: 1;
+        text-shadow: 0px 5px 25px rgba(172, 255, 47, 0.501);
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#showFireworks {
+    display: none;
+    background-image: linear-gradient(white, rgb(8, 8, 70));
+}
+
+@keyframes fireworks {
+    0% {
+        transform: translateY(100vh);
+    }
+
+    50% {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+    }
+
+    75% {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+.fireworks,
+.fireworks2,
+.fireworks3,
+.fireworks4,
+.fireworks5 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    background-image: radial-gradient(yellow, rgb(0, 0, 93)),
+        radial-gradient(red, rgb(0, 0, 93)),
+        radial-gradient(rgb(255, 0, 149), rgb(0, 0, 93)),
+        radial-gradient(rgb(153, 0, 255), rgb(0, 0, 93)),
+        radial-gradient(rgb(255, 0, 149), rgb(0, 0, 93)),
+        radial-gradient(rgb(255, 0, 170), rgb(0, 0, 93)),
+        radial-gradient(rgb(0, 255, 170), rgb(0, 0, 93)),
+        radial-gradient(rgb(153, 0, 255), rgb(0, 0, 93)),
+        radial-gradient(rgb(255, 0, 149), rgb(0, 0, 93)),
+        radial-gradient(rgb(0, 174, 255), rgb(0, 0, 93)),
+        radial-gradient(rgb(0, 255, 170), rgb(0, 0, 93)),
+        radial-gradient(rgb(153, 0, 255), rgb(0, 0, 93)),
+        radial-gradient(rgb(0, 255, 170), rgb(0, 0, 93)),
+        radial-gradient(rgb(153, 0, 255), rgb(0, 0, 93)),
+        radial-gradient(rgb(255, 0, 149), rgb(0, 0, 93)),
+        radial-gradient(rgb(200, 255, 0), rgb(0, 0, 93)),
+        radial-gradient(rgb(0, 255, 170), rgb(0, 0, 93)),
+        radial-gradient(rgb(0, 140, 255), rgb(0, 0, 93)),
+        radial-gradient(rgb(255, 217, 0), rgb(0, 0, 93)),
+        radial-gradient(rgb(0, 140, 255), rgb(0, 0, 93)), radial-gradient(red, rgb(0, 0, 93)),
+        radial-gradient(rgb(166, 255, 0), rgb(0, 0, 93)),
+        radial-gradient(rgb(166, 255, 0), rgb(0, 0, 93)),
+        radial-gradient(rgb(255, 0, 149), rgb(0, 0, 93));
+    background-position: 95% 30%, 50% 0%, 100% 10%, 20% 10%, 50% 50%, 30% 30%,
+        0% 50%, 80% 25%, 50% 30%, 80% 50%, 100% 60%, 80% 80%, 20% 85%, 0 25%,
+        55% 65%, 85% 0, 50% 100%, 70% 90%, 10% 70%, 70% 70%, 30% 70%, 20% 40%,
+        40% 90%, 90% 90%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    animation: fireworks 2s infinite;
+}
+
+.fireworks2 {
+    top: 50%;
+    left: 30%;
+    animation-delay: 0.5s;
+}
+
+.fireworks3 {
+    top: 20%;
+    left: 70%;
+    animation-delay: 0.75s;
+}
+
+.fireworks4 {
+    top: 70%;
+    left: 20%;
+    animation-delay: 1.75s;
+}
+
+.fireworks5 {
+    top: 40%;
+    left: 10%;
+    animation-delay: 1.25s;
+}
+
+
+@keyframes twinkle{
+    0%{
+        background-size: 1px 1px;
+    }
+    50%{
+        background-size: 3.5px 3.5px;
+    }
+    100%{
+        background-size: 1px 1px;
+    }
+}
+
+.stars,
+.stars2,
+.stars3,
+.stars4,
+.stars5 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    background-image: radial-gradient(white,blue),
+        radial-gradient(white,blue),
+        radial-gradient(yellow,blue),
+        radial-gradient(white,blue),
+        radial-gradient(white,yellow),
+        radial-gradient(white,blue),
+        radial-gradient(white,blue),
+        radial-gradient(yellow,blue),
+        radial-gradient(white,blue),
+        radial-gradient(white,yellow),
+        radial-gradient(white,blue),
+        radial-gradient(white,blue),
+        radial-gradient(yellow,blue),
+        radial-gradient(white,blue),
+        radial-gradient(white,blue),
+        radial-gradient(white,yellow),
+        radial-gradient(white,blue),
+        radial-gradient(white,blue),
+        radial-gradient(white,yellow),
+        radial-gradient(white,blue),
+        radial-gradient(yellow,blue),
+        radial-gradient(white,yellow),
+        radial-gradient(white,blue),
+        radial-gradient(white,blue),
+        radial-gradient(white,blue),
+        radial-gradient(white,blue),
+        radial-gradient(white,yellow),
+        radial-gradient(white,blue),
+        radial-gradient(white,blue);
+    background-position: 95% 30%, 50% 0%, 100% 10%, 20% 10%, 50% 50%, 30% 30%,
+        0% 50%, 80% 25%, 50% 30%, 80% 50%, 100% 60%, 80% 80%, 20% 85%, 0 25%,
+        55% 65%, 85% 0, 50% 100%, 70% 90%, 10% 70%, 70% 70%, 30% 70%, 20% 40%,
+        40% 90%, 90% 90%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    background-size: 1px 1px;
+    background-repeat: no-repeat;
+    animation: twinkle 2s linear infinite;
+}
+
+.stars2 {
+    top: 50%;
+    left: 30%;
+    animation-delay: 0.5s;
+}
+
+.stars3 {
+    top: 20%;
+    left: 70%;
+    animation-delay: 0.75s;
+}
+
+.stars4 {
+    top: 70%;
+    left: 20%;
+    animation-delay: 1.75s;
+}
+
+.stars5 {
+    top: 40%;
+    left: 10%;
+    animation-delay: 1.25s;
+}
