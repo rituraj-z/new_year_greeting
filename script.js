@@ -49,7 +49,7 @@ class NewYearCountdown {
     }
 
     updateCountdown() {
-        const newYear = new Date('January 1, 2025 00:00:00').getTime();
+        const newYear = new Date('December 31, 2024 18:50:00').getTime();
         const now = new Date().getTime();
         const timeLeft = newYear - now;
 
