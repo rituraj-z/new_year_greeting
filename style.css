@@ -175,8 +175,8 @@ center {
 }
 
 #nyquotes {
+    margin-top: 10px;
     transition: all 0.5s ease-in-out;
-    text-shadow: 5px 10px 10px black;
 }
 
 @keyframes zoomIn {
@@ -278,42 +278,6 @@ a {
     width: 14px;
 }
 
-.wish {
-    z-index: 20;
-    flex: 10;
-    position: absolute;
-    font-size: 16px;
-    color: white;
-    font-weight: bold;
-    width: 100%;
-    padding: 5px 10px 5px 10px;
-    display: none;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    border-radius: 13px;
-    transform: translate(0vw, 30vh);
-}
-
-button {
-    cursor: pointer;
-    width: 30vw;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    display: flex;
-    height: 35px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.347);
-    border: 2px solid black;
-    outline: none;
-    color: black;
-    font-weight: bolder;
-    font-family: cursive;
-    font-size: 16px;
-    letter-spacing: 1px;
-}
 
 @keyframes popup {
     0% {
@@ -344,6 +308,53 @@ button {
         height: 50px;
     }
 
+}
+
+.wait {
+    background: transparent;
+    position: absolute;
+    display: flex;
+    width: 260px;
+    right: 50%;
+    top: 55.5%;
+    font-size: 14px;
+    font-family: cursive;
+    font-weight: bold;
+    transform: translate(50%, 50%);
+    text-shadow: 2px 2px 8px yellow;
+    justify-content: center;
+    height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 8s steps(36, end) infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0px;
+        opacity: 0;
+    }
+
+    20% {
+
+        width: 260px;
+        opacity: 1;
+    }
+
+    60% {
+        width: 260px;
+        opacity: 1;
+    }
+
+    70% {
+        width: 0px;
+        opacity: 0;
+    }
+
+    100% {
+        width: 0px;
+        opacity: 0;
+    }
 }
 
 .yearanimate {
@@ -536,14 +547,16 @@ button {
 }
 
 
-@keyframes twinkle{
-    0%{
+@keyframes twinkle {
+    0% {
         background-size: 1px 1px;
     }
-    50%{
+
+    50% {
         background-size: 3.5px 3.5px;
     }
-    100%{
+
+    100% {
         background-size: 1px 1px;
     }
 }
@@ -557,35 +570,35 @@ button {
     top: 40%;
     left: 50%;
 
-    background-image: radial-gradient(white,blue),
-        radial-gradient(white,blue),
-        radial-gradient(yellow,blue),
-        radial-gradient(white,blue),
-        radial-gradient(white,yellow),
-        radial-gradient(white,blue),
-        radial-gradient(white,blue),
-        radial-gradient(yellow,blue),
-        radial-gradient(white,blue),
-        radial-gradient(white,yellow),
-        radial-gradient(white,blue),
-        radial-gradient(white,blue),
-        radial-gradient(yellow,blue),
-        radial-gradient(white,blue),
-        radial-gradient(white,blue),
-        radial-gradient(white,yellow),
-        radial-gradient(white,blue),
-        radial-gradient(white,blue),
-        radial-gradient(white,yellow),
-        radial-gradient(white,blue),
-        radial-gradient(yellow,blue),
-        radial-gradient(white,yellow),
-        radial-gradient(white,blue),
-        radial-gradient(white,blue),
-        radial-gradient(white,blue),
-        radial-gradient(white,blue),
-        radial-gradient(white,yellow),
-        radial-gradient(white,blue),
-        radial-gradient(white,blue);
+    background-image: radial-gradient(white, blue),
+        radial-gradient(white, blue),
+        radial-gradient(yellow, blue),
+        radial-gradient(white, blue),
+        radial-gradient(white, yellow),
+        radial-gradient(white, blue),
+        radial-gradient(white, blue),
+        radial-gradient(yellow, blue),
+        radial-gradient(white, blue),
+        radial-gradient(white, yellow),
+        radial-gradient(white, blue),
+        radial-gradient(white, blue),
+        radial-gradient(yellow, blue),
+        radial-gradient(white, blue),
+        radial-gradient(white, blue),
+        radial-gradient(white, yellow),
+        radial-gradient(white, blue),
+        radial-gradient(white, blue),
+        radial-gradient(white, yellow),
+        radial-gradient(white, blue),
+        radial-gradient(yellow, blue),
+        radial-gradient(white, yellow),
+        radial-gradient(white, blue),
+        radial-gradient(white, blue),
+        radial-gradient(white, blue),
+        radial-gradient(white, blue),
+        radial-gradient(white, yellow),
+        radial-gradient(white, blue),
+        radial-gradient(white, blue);
     background-position: 95% 30%, 50% 0%, 100% 10%, 20% 10%, 50% 50%, 30% 30%,
         0% 50%, 80% 25%, 50% 30%, 80% 50%, 100% 60%, 80% 80%, 20% 85%, 0 25%,
         55% 65%, 85% 0, 50% 100%, 70% 90%, 10% 70%, 70% 70%, 30% 70%, 20% 40%,
@@ -620,4 +633,85 @@ button {
     top: 40%;
     left: 10%;
     animation-delay: 1.25s;
+}
+
+.row {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    z-index: 20;
+    transform: translate(0vw, -14vh);
+
+}
+
+.wish {
+    z-index: 20;
+    flex: 10;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    /* width: 100%; */
+    padding: 5px 10px 5px 10px;
+    display: none;
+    border-radius: 13px;
+    /* flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center; */
+    /* transform: translate(0vw, 25vh); */
+}
+
+.wish button {
+    cursor: pointer;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    height: 35px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.404);
+    border: 2px solid black;
+    outline: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.generate {
+    z-index: 20;
+    flex: 10;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    /* width: 100%; */
+    padding: 5px 10px 5px 10px;
+    display: none;
+    border-radius: 13px;
+    /* flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center; */
+    /* transform: translate(0vw, 33vh); */
+}
+
+.generate button {
+    cursor: pointer;
+    width: 160px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    height: 35px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.404);
+    border: 2px solid black;
+    outline: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: 1px;
 }
